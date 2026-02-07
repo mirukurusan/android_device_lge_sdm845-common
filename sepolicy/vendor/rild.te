@@ -4,5 +4,4 @@ get_prop(rild, boot_status_prop)
 allow rild hal_lgdata_hwservice:hwservice_manager find;
 allow rild diag_device:chr_file rw_file_perms;
 
-binder_call(rild, hal_lgdata_hwservice)
 binder_call(rild, hal_lgdata_default)
