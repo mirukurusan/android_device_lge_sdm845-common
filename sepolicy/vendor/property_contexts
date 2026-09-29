@@ -1,5 +1,18 @@
 # Audio
 ro.vendor.lge.feature.use_audio_headset_type_ext    u:object_r:vendor_audio_prop:s0
+# FM volume gain factors read by the prebuilt LG audio HAL. All three default to
+# the built-in string "0.53" inside audio.primary.judyln.so:
+#   _headset / _speaker -> lge_fm_set_gain_factor_from_property() scales the value
+#                          that lge_fm_calc_volume() writes to the FM RX volume
+#                          control (vol * 8192 * factor).
+#   _factor             -> returned by the exported
+#                          lge_set_fm_gain_factor_from_property().
+# Typed as vendor_lge_misc_prop on purpose: the audio HAL runs as
+# hal_audio_default, which is granted get_prop() only for vendor_lge_misc_prop
+# (see hal_audio_default.te), not for vendor_audio_prop.
+vendor.lge.fm_gain_control_headset                  u:object_r:vendor_lge_misc_prop:s0
+vendor.lge.fm_gain_control_speaker                  u:object_r:vendor_lge_misc_prop:s0
+vendor.lge.fm_gain_control_factor                   u:object_r:vendor_lge_misc_prop:s0
 
 # Camera
 persist.vendor.lge.camera.                          u:object_r:camera_prop:s0
