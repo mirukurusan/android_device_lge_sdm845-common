@@ -388,3 +388,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit proprietary blobs
 $(call inherit-product, vendor/lge/sdm845-common/sdm845-common-vendor.mk)
+
+# Dolby Audio
+$(call inherit-product, hardware/dolby/dolby.mk)
