@@ -45,7 +45,6 @@ persist.vendor.lge.service.kernel.enable            u:object_r:vendor_qni_prop:s
 
 # RIL
 vendor.lge.data.net.iwlan.                          u:object_r:vendor_radio_prop:s0
-vendor.lge.ril.                                     u:object_r:vendor_radio_prop:s0
 
 # Thermal
 persist.vendor.lge.sys.thermald_miti_off            u:object_r:thermal-engine_prop:s0
