@@ -11,6 +11,7 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.lge.3rd.speaker.prot.enable=on
+persist.vendor.lge.audio.hifi_adv_support=1
 ro.vendor.audio.sdk.fluencetype=nxp
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
