@@ -29,23 +29,41 @@ vendor/lib/hw/com.dsi.ant@1.0-impl.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
+vendor/lib/hw/audio.primary.sdm845.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
+vendor/lib/libaudio_log_utils.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
+vendor/lib/libbatterylistener.so
+vendor/lib/libcomprcapture.so
 vendor/lib/libcsd-client.so
 vendor/lib/libdrc.so
+vendor/lib/libexthwplugin.so
 vendor/lib/libqtigef.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
+vendor/lib64/hw/audio.primary.sdm845.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
+vendor/lib64/libbatterylistener.so
+vendor/lib64/libcomprcapture.so
 vendor/lib64/libcsd-client.so
+vendor/lib64/libexthwplugin.so
 vendor/lib64/libqtigef.so
+vendor/lib64/libsndmonitor.so
+vendor/lib64/libspkrprot.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti

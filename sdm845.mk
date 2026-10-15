@@ -65,29 +65,29 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@2.0-impl \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
+    android.hardware.audio.common@2.0-util \
+    android.hardware.audio.common@6.0-util \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.bluetooth.audio-impl \
-    audio.primary.sdm845 \
-    liba2dpoffload \
-    libbatterylistener \
-    libcomprcapture \
-    libexthwplugin \
+    libaudio-resampler \
+    libaudioroute \
     libhdmiedid \
     libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndmonitor \
-    libspkrprot \
-    libtinycompress \
     libvolumelistener \
-    tinymix
+    tinymix \
+    libtinycompress
 
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl \
-    sound_trigger.primary.sdm845
+    QuadDACPanel \
+    vendor.lge.hardware.audio.dac.control@2.0-service.proprietary
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
