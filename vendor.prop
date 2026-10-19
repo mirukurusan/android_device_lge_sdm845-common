@@ -139,6 +139,14 @@ drm.service.enabled=true
 # Factory reset partition
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FM
+# Gain factors used by the prebuilt audio HAL when it computes the FM RX volume
+# control: value = round(stream_volume * 8192 * factor). 1.0 is the maximum
+# usable value, the mixer control saturates at 8192 (INT_RX_VOL_GAIN).
+vendor.lge.fm_gain_control_speaker=1.0
+vendor.lge.fm_gain_control_headset=1.0
+vendor.lge.fm_gain_control_factor=1.0
+
 # HWUI
 debug.hwui.renderer=skiagl
 debug.hwui.skia_atrace_enabled=false
