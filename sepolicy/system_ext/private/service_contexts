@@ -1,0 +1,5 @@
+com.lge.ims.phone             u:object_r:ims_service:s0
+com.lge.server.ims.sms        u:object_r:ims_service:s0
+com.lge.server.ims.sms.scbm   u:object_r:ims_service:s0
+lgeims_mmpf                   u:object_r:ims_service:s0
+lgdataruntimefeature          u:object_r:lgdataruntimefeature_service:s0

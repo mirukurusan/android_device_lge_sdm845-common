@@ -1,0 +1,2 @@
+hal_client_domain(radio, hal_vssims)
+hal_client_domain(radio, hal_soi)

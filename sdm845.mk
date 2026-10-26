@@ -275,6 +275,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
@@ -353,6 +354,52 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
+
+# LG IMS & VoLTE Stack
+PRODUCT_PACKAGES += \
+    Ims6 \
+    lgdataservice \
+    lgdataservice-manager \
+    com.lge.ims.httpTxn \
+    com.lge.wfcsupport \
+    lgsvcitems \
+    ipsecd \
+    imsipsecclient \
+    imsipsecstarter \
+    LGDataFeature \
+    libcharon \
+    libstrongswan \
+    libpatchcodeid \
+    libsimaka \
+    libLgeProductProperties \
+    libLgeProductFeatures2 \
+    vendor.lge.hardware.property@2.0 \
+    vendor.lge.hardware.vss_ims@1.0 \
+    libims.lge \
+    libimscamerajni.lge \
+    libimsmmpf.lge \
+    libimswms.lge \
+    libhidltransport
+
+# Init scripts and config files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.lge.ims.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lge.ims.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.lge.iwlan.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lge.iwlan.rc \
+    vendor/lge/sdm845-common/proprietary/system_ext/lib64/vendor.lge.hardware.vss_ims@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.lge.hardware.vss_ims@1.0.so \
+    vendor/lge/sdm845-common/proprietary/system_ext/lib64/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.lge.hardware.soi@1.0.so \
+    vendor/lge/sdm845-common/proprietary/system_ext/lib/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.lge.hardware.soi@1.0.so \
+    vendor/lge/sdm845-common/proprietary/system_ext/lib64/libhidltransport.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libhidltransport.so \
+    vendor/lge/sdm845-common/proprietary/system_ext/lib/libhidltransport.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libhidltransport.so \
+    vendor/lge/sdm845-common/proprietary/vendor/bin/hw/vendor.lge.hardware.soi@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.lge.hardware.soi@1.0-service \
+    vendor/lge/sdm845-common/proprietary/vendor/etc/init/vendor.lge.hardware.soi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lge.hardware.soi@1.0-service.rc \
+    vendor/lge/sdm845-common/proprietary/vendor/lib64/hw/vendor.lge.hardware.soi@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.lge.hardware.soi@1.0-impl.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib64/liblgesoi-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblgesoi-impl.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib64/libqmi_wms_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_wms_client_helper.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib64/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.lge.hardware.soi@1.0.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib/hw/vendor.lge.hardware.soi@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.lge.hardware.soi@1.0-impl.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib/liblgesoi-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/liblgesoi-impl.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib/libqmi_wms_client_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi_wms_client_helper.so \
+    vendor/lge/sdm845-common/proprietary/vendor/lib/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.lge.hardware.soi@1.0.so
 
 # Thermal
 PRODUCT_COPY_FILES += \

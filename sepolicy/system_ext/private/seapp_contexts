@@ -1,0 +1,4 @@
+user=_app seinfo=platform name=product.lge.data.server domain=vendor_dataservice_app type=radio_data_file levelFrom=all
+user=_app seinfo=platform name=.lgedataservice domain=vendor_dataservice_app type=radio_data_file levelFrom=all
+user=_app isPrivApp=true name=product.lge.data.server domain=vendor_dataservice_app type=radio_data_file levelFrom=all
+user=_app isPrivApp=true name=.lgedataservice domain=vendor_dataservice_app type=radio_data_file levelFrom=all

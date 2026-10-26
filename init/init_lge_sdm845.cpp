@@ -96,6 +96,8 @@ void init_target_properties() {
 
     if(dualSim) {
         property_override("persist.radio.multisim.config", "dsds");
+        property_override("persist.vendor.lge.ims.dualvolte", "1");
+        property_override("persist.vendor.lge.data.ltedsds", "1");
     }
 
     property_override("ro.product.model", model);

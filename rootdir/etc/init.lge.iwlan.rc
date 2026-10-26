@@ -1,0 +1,22 @@
+# 2015-10-12 protocol-iwlan@lge.com LGP_DATA_IWLAN
+on post-fs-data
+    mkdir /data/ipsec 0700 root root
+    mkdir /data/ipsec/cacerts 0700 root root
+    mkdir /data/ipsec/wo 0700 root root
+    mkdir /dev/net/ 0700 root root
+
+service ipsecd /system_ext/bin/ipsecd
+    class late_start
+    socket wod_action stream 660 root inet
+    socket wod_sim stream 660 root inet
+    socket wod_ipsec stream 660 root system
+    user root
+    group system vpn net_admin log inet radio
+
+# 2019-12-10 wonkwon.lee@lge.com LGP_DATA_IWLAN_ALLOW_LOCAL_BREAKOUT [START]
+on property:persist.vendor.cne.feature=0
+    setprop persist.vendor.data.iwlan.enable false
+
+on property:persist.vendor.cne.feature=1
+    setprop persist.vendor.data.iwlan.enable true
+# 2019-12-10 wonkwon.lee@lge.com LGP_DATA_IWLAN_ALLOW_LOCAL_BREAKOUT [END]

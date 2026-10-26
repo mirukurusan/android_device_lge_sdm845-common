@@ -1,0 +1,9 @@
+net.wo.                                            u:object_r:epdg_data_prop:s0
+persist.net.wo.                                    u:object_r:epdg_data_prop:s0
+net.handover.                                      u:object_r:epdg_data_prop:s0
+net.iwlan.                                         u:object_r:epdg_data_prop:s0
+net.iwlan_possible                                 u:object_r:epdg_data_prop:s0
+product.lge.                                       u:object_r:product_lge_system_prop:s0
+persist.product.lge.                               u:object_r:product_lge_system_prop:s0
+ro.product.lge.                                    u:object_r:product_lge_system_prop:s0
+ctl.product.imsipsecclient                         u:object_r:product_lge_ctl_ims_prop:s0

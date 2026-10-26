@@ -47,7 +47,8 @@
             <item value="supl" />
             <item value="fota" />
         </string-array>
-        <boolean name="carrier_volte_available_bool" value="false" />
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="ims.voice_qos_precondition_supported_bool" value="false" />
         <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="false" />
         <boolean name="carrier_wfc_ims_available_bool" value="false" />
@@ -955,7 +956,7 @@
             <string name="protocol">IPV4V6</string>
             <string name="roaming_protocol">IPV4V6</string>
         </map>
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -972,7 +973,7 @@
             <string name="protocol">IPV4V6</string>
             <string name="roaming_protocol">IPV4V6</string>
         </map>
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -1100,7 +1101,7 @@
         </map>
         <boolean name="config_show_orig_dial_string_for_cdma" value="true" />
         <boolean name="config_hide_vt_callforward_option" value="true" />
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -1127,7 +1128,7 @@
             <string name="roaming_protocol">IPV4V6</string>
         </map>
         <boolean name="config_hide_vt_callforward_option" value="true" />
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
@@ -1265,7 +1266,7 @@
             <string name="roaming_protocol">IPV4V6</string>
         </map>
         <boolean name="config_hide_vt_callforward_option" value="true" />
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -1273,6 +1274,8 @@
         </string-array>
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
+        <boolean name="carrier_name_override_bool" value="true" />
+        <string name="carrier_name_string">China Telecom</string>
         <boolean name="config_auto_retry_cfu_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="460" mnc="12">
@@ -1290,8 +1293,11 @@
             <string name="roaming_protocol">IPV4V6</string>
         </map>
         <boolean name="config_hide_vt_callforward_option" value="true" />
-        <boolean name="enhanced_4g_lte_on_by_default_bool" value="false" />
+        <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
+        <boolean name="carrier_name_override_bool" value="true" />
+        <string name="carrier_name_string">China Telecom</string>
         <boolean name="config_auto_retry_cfu_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="310" mnc="00">

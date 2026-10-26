@@ -1,0 +1,2 @@
+type ims_service, app_api_service, service_manager_type;
+type lgdataruntimefeature_service, app_api_service, service_manager_type;

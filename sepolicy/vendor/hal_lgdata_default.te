@@ -1,1 +1,4 @@
 allow hal_lgdata_default self:socket create;
+allow vendor_dataservice_app hal_lgdata_hwservice:hwservice_manager find;
+binder_call(vendor_dataservice_app, hal_lgdata_default)
+binder_call(hal_lgdata_default, vendor_dataservice_app)

@@ -1,0 +1,7 @@
+/(system_ext|system/system_ext)/bin/imsipsecclient    u:object_r:imsipsecclient_exec:s0
+/(system_ext|system/system_ext)/bin/imsipsecstarter   u:object_r:imsipsecstarter_exec:s0
+/(system_ext|system/system_ext)/bin/ipsecd            u:object_r:ipsecd_exec:s0
+
+/dev/socket/wod_sim    u:object_r:ipsecd_socket:s0
+/dev/socket/wod_ipsec  u:object_r:ipsecd_socket:s0
+/dev/socket/wod_action u:object_r:ipsecd_socket:s0

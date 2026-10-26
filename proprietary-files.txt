@@ -783,6 +783,18 @@ vendor/lib64/hw/vendor.lge.hardware.vss_ims@1.0-impl.so
 vendor/lib64/libvssims-impl.so
 vendor/lib64/vendor.lge.hardware.vss_ims@1.0.so
 
+# RIL - SOI (SMS Over IP)
+vendor/bin/hw/vendor.lge.hardware.soi@1.0-service
+vendor/etc/init/vendor.lge.hardware.soi@1.0-service.rc
+vendor/lib/hw/vendor.lge.hardware.soi@1.0-impl.so
+vendor/lib/liblgesoi-impl.so
+vendor/lib/libqmi_wms_client_helper.so
+vendor/lib/vendor.lge.hardware.soi@1.0.so
+vendor/lib64/hw/vendor.lge.hardware.soi@1.0-impl.so
+vendor/lib64/liblgesoi-impl.so
+vendor/lib64/libqmi_wms_client_helper.so
+vendor/lib64/vendor.lge.hardware.soi@1.0.so
+
 # Sensors
 vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.sensors.qti.rc

@@ -1,0 +1,58 @@
+type imsipsecclient, domain, coredomain, mlstrustedsubject;
+type imsipsecclient_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(imsipsecclient)
+net_domain(imsipsecclient)
+
+type imsipsecstarter, domain, coredomain;
+type imsipsecstarter_exec, exec_type, system_file_type, file_type;
+init_daemon_domain(imsipsecstarter)
+net_domain(imsipsecstarter)
+
+type ipsecd, domain, coredomain;
+type ipsecd_exec, exec_type, system_file_type, file_type;
+type ipsecd_socket, coredomain_socket, file_type;
+init_daemon_domain(ipsecd)
+net_domain(ipsecd)
+
+allow imsipsecclient self:capability { net_admin net_raw };
+allow imsipsecclient self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow imsipsecclient vendor_qtelephony:unix_stream_socket connectto;
+allow vendor_qtelephony imsipsecclient:unix_stream_socket connectto;
+dontaudit imsipsecclient vendor_default_prop:file read;
+
+allow radio imsipsecstarter:unix_dgram_socket sendto;
+allow imsipsecstarter radio:unix_dgram_socket sendto;
+allow radio imsipsecclient:unix_dgram_socket sendto;
+allow imsipsecclient radio:unix_dgram_socket sendto;
+
+allow ipsecd self:capability { net_admin net_raw };
+allow ipsecd self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow ipsecd self:netlink_route_socket { nlmsg_read nlmsg_write };
+allow ipsecd self:tun_socket create_socket_perms_no_ioctl;
+allow ipsecd tun_device:chr_file rw_file_perms;
+allow ipsecd ipsecd_socket:sock_file rw_file_perms;
+
+set_prop(imsipsecclient, epdg_data_prop)
+get_prop(imsipsecclient, epdg_data_prop)
+set_prop(ipsecd, epdg_data_prop)
+get_prop(ipsecd, epdg_data_prop)
+set_prop(imsipsecstarter, product_lge_ctl_ims_prop)
+get_prop(imsipsecstarter, product_lge_ctl_ims_prop)
+
+get_prop(vendor_dataservice_app, epdg_data_prop)
+set_prop(vendor_dataservice_app, epdg_data_prop)
+get_prop(vendor_dataservice_app, product_lge_system_prop)
+set_prop(vendor_dataservice_app, product_lge_system_prop)
+
+get_prop(radio, epdg_data_prop)
+set_prop(radio, epdg_data_prop)
+get_prop(radio, product_lge_system_prop)
+set_prop(radio, product_lge_system_prop)
+
+get_prop(system_app, product_lge_system_prop)
+set_prop(system_app, product_lge_system_prop)
+
+allow vendor_dataservice_app ipsecd_socket:sock_file rw_file_perms;
+allow vendor_dataservice_app ipsecd:unix_stream_socket connectto;
+allow radio ipsecd_socket:sock_file rw_file_perms;
+allow radio ipsecd:unix_stream_socket connectto;
