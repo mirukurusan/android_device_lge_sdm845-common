@@ -1,0 +1,14 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libshim_lge_ims",
+    srcs: ["libshim_lge_ims.cpp"],
+    shared_libs: [
+        "libui",
+        "libutils",
+    ],
+    system_ext_specific: true,
+}

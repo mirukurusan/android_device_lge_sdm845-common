@@ -379,7 +379,8 @@ PRODUCT_PACKAGES += \
     libimscamerajni.lge \
     libimsmmpf.lge \
     libimswms.lge \
-    libhidltransport
+    libhidltransport \
+    libshim_lge_ims
 
 # Init scripts and config files
 PRODUCT_COPY_FILES += \
