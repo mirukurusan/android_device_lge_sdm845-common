@@ -54,8 +54,17 @@
         <boolean name="hide_enhanced_4g_lte_bool" value="false" />
         <boolean name="carrier_volte_provisioning_required_bool" value="false" />
         <boolean name="carrier_vt_available_bool" value="false" />
-        <boolean name="carrier_wfc_ims_available_bool" value="false" />
-        <boolean name="carrier_default_wfc_ims_enabled_bool" value="false" />
+        <int-array name="iwlan.supported_integrity_algorithms_int_array" num="4">
+            <item value="2" />
+            <item value="12" />
+            <item value="13" />
+            <item value="14" />
+        </int-array>
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
         <boolean name="config_force_send_sms_over_cs" value="false" />
         <boolean name="vendor_hide_volte_settng_ui" value="false" />

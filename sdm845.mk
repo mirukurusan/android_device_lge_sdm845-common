@@ -355,7 +355,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# LG IMS & VoLTE Stack
+# LG IMS & VoLTE/VoWiFi Stack
 PRODUCT_PACKAGES += \
     Ims6 \
     lgdataservice \
@@ -366,6 +366,12 @@ PRODUCT_PACKAGES += \
     ipsecd \
     imsipsecclient \
     imsipsecstarter \
+    charon \
+    ipsec \
+    starter \
+    stroke \
+    Iwlan \
+    QualifiedNetworksService \
     LGDataFeature \
     libcharon \
     libstrongswan \
@@ -386,6 +392,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.lge.ims.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lge.ims.rc \
     $(LOCAL_PATH)/rootdir/etc/init.lge.iwlan.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lge.iwlan.rc \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/andsf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/andsf.xml \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ike_conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ike_conf.xml \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/mapcon_conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/mapcon_conf.xml \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/CA1.cer:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/CA1.cer \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/CA1L1.crt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/CA1L1.crt \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/cacert_232005.der:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/cacert_232005.der \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/cacert_232010.der:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/cacert_232010.der \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/cacert_232014.der:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/cacert_232014.der \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/cacert_50501.cer:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/cacert_50501.cer \
+    vendor/lge/sdm845-common/proprietary/system_ext/etc/ipsec/ipsec.d/cacert_655010.der:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/ipsec/ipsec.d/cacert_655010.der \
     vendor/lge/sdm845-common/proprietary/system_ext/lib64/vendor.lge.hardware.vss_ims@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.lge.hardware.vss_ims@1.0.so \
     vendor/lge/sdm845-common/proprietary/system_ext/lib64/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.lge.hardware.soi@1.0.so \
     vendor/lge/sdm845-common/proprietary/system_ext/lib/vendor.lge.hardware.soi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.lge.hardware.soi@1.0.so \

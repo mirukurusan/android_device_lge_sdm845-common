@@ -330,4 +330,13 @@
 
     <!-- Flag specifying whether WFC over IMS should be available for carrier -->
     <bool name="config_carrier_wfc_ims_available">true</bool>
+
+    <!-- IWLAN data service package name to bind to by default -->
+    <string name="config_wlan_data_service_package" translatable="false">product.lge.data.server</string>
+
+    <!-- IWLAN network service package name to bind to by default -->
+    <string name="config_wlan_network_service_package" translatable="false">product.lge.data.server</string>
+
+    <!-- Telephony qualified networks service package name to bind to by default -->
+    <string name="config_qualified_networks_service_package" translatable="false">com.android.telephony.qns</string>
 </resources>

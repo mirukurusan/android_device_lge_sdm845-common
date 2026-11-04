@@ -25,12 +25,20 @@ allow imsipsecstarter radio:unix_dgram_socket sendto;
 allow radio imsipsecclient:unix_dgram_socket sendto;
 allow imsipsecclient radio:unix_dgram_socket sendto;
 
+allow init ipsecd_socket:sock_file create_file_perms;
+allow init ipsecd_socket:unix_stream_socket { create bind listen };
+allow init ipsecd_socket:unix_dgram_socket { create bind };
+
 allow ipsecd self:capability { net_admin net_raw };
 allow ipsecd self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
 allow ipsecd self:netlink_route_socket { nlmsg_read nlmsg_write };
 allow ipsecd self:tun_socket create_socket_perms_no_ioctl;
 allow ipsecd tun_device:chr_file rw_file_perms;
 allow ipsecd ipsecd_socket:sock_file rw_file_perms;
+allow ipsecd vpn_data_file:dir create_dir_perms;
+allow ipsecd vpn_data_file:file create_file_perms;
+r_dir_file(ipsecd, netutils_wrapper_exec)
+domain_auto_trans(ipsecd, netutils_wrapper_exec, netutils_wrapper)
 
 set_prop(imsipsecclient, epdg_data_prop)
 get_prop(imsipsecclient, epdg_data_prop)
