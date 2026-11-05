@@ -110,7 +110,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service_32.lineage \
+    android.hardware.camera.provider-service_32.lge \
     vendor.qti.hardware.camera.device@1.0
 
 # Cgroup and task profiles

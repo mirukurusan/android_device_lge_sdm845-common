@@ -12,3 +12,19 @@ cc_library_shared {
     ],
     system_ext_specific: true,
 }
+
+cc_library_shared {
+    name: "camera.sdm845",
+    relative_install_path: "hw",
+    vendor: true,
+    compile_multilib: "32",
+    srcs: ["camera.sdm845.cpp"],
+    shared_libs: [
+        "libbase",
+        "libcamera_metadata",
+        "libcutils",
+        "libdl",
+        "libhardware",
+        "liblog",
+    ],
+}
