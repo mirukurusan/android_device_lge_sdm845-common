@@ -1,1 +1,2 @@
 get_prop(platform_app, vendor_display_notch_prop)
+get_prop(platform_app, vendor_lge_misc_prop)
